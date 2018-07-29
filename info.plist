@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>net.resessh.google-translate-japanese</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>03296BE4-DAA8-4A9C-9C2A-68A7EBF42815</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B236C1D9-F743-4BE8-9849-01AD1D638E61</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>resessh</string>
+	<key>description</key>
+	<string>英和・和英のGoogle翻訳</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Google Translate Japanese</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B236C1D9-F743-4BE8-9849-01AD1D638E61</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>tj</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>翻訳中...</string>
+				<key>script</key>
+				<string>import sys
+from translate import translate
+
+query = sys.argv[1]
+
+sys.stdout.write(translate(query))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Google Translateで英和・和英の翻訳をする</string>
+				<key>title</key>
+				<string>翻訳する文章を入力してください</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>03296BE4-DAA8-4A9C-9C2A-68A7EBF42815</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Google TranslateをAlfredから使うWorkflowです。
+このWorkflowを使うにはGoogle Apisからアクセストークンを取得する必要があります。
+取得後はWorkflow Configurationからtokenを設定してください。</string>
+	<key>uidata</key>
+	<dict>
+		<key>03296BE4-DAA8-4A9C-9C2A-68A7EBF42815</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>B236C1D9-F743-4BE8-9849-01AD1D638E61</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>token</key>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>token</string>
+	</array>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
